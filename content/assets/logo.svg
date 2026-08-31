@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" fill="none">
+  <!-- CyberCompile wordmark — minimal, technical, dark-theme friendly -->
+  <defs>
+    <linearGradient id="wordmark-grad" x1="0" y1="0" x2="280" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- "cyber" -->
+  <text
+    x="6"
+    y="38"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="22"
+    font-weight="600"
+    fill="url(#wordmark-grad)"
+    letter-spacing="0.5"
+  >
+    cyber
+  </text>
+
+  <!-- stylized isolated node -->
+  <g transform="translate(88, 18)">
+    <circle cx="6" cy="6" r="6" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+    <circle cx="6" cy="6" r="1.6" fill="#fbbf24"/>
+  </g>
+
+  <!-- "compile" -->
+  <text
+    x="104"
+    y="38"
+    font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    font-size="22"
+    font-weight="600"
+    fill="var(--cy-neutral-text, #e5e7eb)"
+    letter-spacing="0.5"
+  >
+    compile
+  </text>
+</svg>

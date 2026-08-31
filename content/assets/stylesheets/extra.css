@@ -1,0 +1,130 @@
+/* ============================================================
+   CyberCompile — extra stylesheet (dark, minimal, professional)
+   Built on top of Material for MkDocs "slate-ish" dark base.
+   ============================================================ */
+
+:root {
+  /* Keep accents restrained; let the content breathe. */
+  --cy-accent: #f59e0b;        /* amber — matches mkdocs.yml accent */
+  --cy-accent-muted: rgba(245, 158, 11, 0.18);
+  --cy-muted-foreground: rgba(255, 255, 255, 0.55);
+  --cy-border: rgba(255, 255, 255, 0.08);
+  --cy-card-bg: rgba(255, 255, 255, 0.03);
+  --cy-card-border: rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- Top hero strip on the home page ---------- */
+.hero {
+  margin: 2.6rem 0 2.8rem;
+  padding: 1.6rem 0 1.2rem;
+  border-bottom: 1px solid var(--cy-border);
+}
+
+.hero p {
+  max-width: 72ch;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--cy-muted-foreground);
+}
+
+/* ---------- Landing "grid" block ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.6rem 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Section index "card" feel ---------- */
+.md-typeset > ul:first-child {
+  margin-top: 0.25rem;
+}
+
+/* ---------- Tables: a little more breathing room ---------- */
+.md-typeset table {
+  border-color: var(--cy-border);
+}
+
+.md-typeset table tr {
+  border-color: var(--cy-border);
+}
+
+.md-typeset table thead th {
+  border-color: var(--cy-border);
+}
+
+/* ---------- Admonitions: slightly calmer default ---------- */
+.md-typeset .admonition,
+.md-typeset details.admonition {
+  border-color: var(--cy-border);
+  background-color: var(--cy-card-bg);
+}
+
+/* ---------- Code blocks: keep them readable, not noisy ---------- */
+.md-typeset pre {
+  border: 1px solid var(--cy-border);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.28);
+}
+
+/* ---------- Keep links distinguishable without shouting ---------- */
+a.md-header__link,
+.md-nav__link--active,
+.md-nav__item--active > md-nav__link,
+.md-typeset a {
+  color: var(--cy-accent);
+}
+
+/* ---------- Lightened scrollbar (still dark) ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ---------- Navigation tabs: slightly flatter ---------- */
+.md-nav__link--top {
+  border-bottom: 2px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+.md-nav__link--active.md-nav__link--top {
+  border-bottom-color: var(--cy-accent);
+}
+
+/* ---------- Minimal "section index" header treatment ---------- */
+.md-content__title {
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Footer polish ---------- */
+.md-footer-meta {
+  border-top-color: var(--cy-border);
+}
+
+/* ---------- Print: keep it usable if anyone ever prints ---------- */
+@media print {
+  .md-nav,
+  .md-footer,
+  .md-source {
+    display: none;
+  }
+}

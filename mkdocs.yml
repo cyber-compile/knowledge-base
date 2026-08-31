@@ -1,0 +1,128 @@
+site_name: CyberCompile
+site_description: >
+  A massive open-access cybersecurity knowledge library — roadmaps, toolkits,
+  cheatsheets, GRC primers, DFIR playbooks, research, and hands-on labs.
+site_author: CyberCompile
+site_url: https://cybercompile.com
+
+# Source lives in content/; build output goes to site/
+docs_dir: content
+site_dir: site
+
+# ---- Build ---------------------------------------------------------
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: amber
+    favicon: assets/favicon.svg
+    logo: assets/logo.svg
+  features:
+    - navigation.expand
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  language: en
+
+# ---- Navigation ----------------------------------------------------
+nav:
+  - Home: index.md
+  - Foundations (01):
+      - Roadmaps:
+          - Offensive Security:
+              - Index: 01-foundations/roadmaps/offensive-security/index.md
+              - Roadmap: 01-foundations/roadmaps/offensive-security-roadmap.md
+          - Application Security: 01-foundations/roadmaps/application-security/index.md
+          - Cloud Security: 01-foundations/roadmaps/cloud-security/index.md
+          - Defensive Security: 01-foundations/roadmaps/defensive-security/index.md
+          - Digital Forensics & Incident Response: 01-foundations/roadmaps/digital-forensics-incident-response/index.md
+          - Governance, Risk & Compliance: 01-foundations/roadmaps/governance-risk-compliance/index.md
+      - Fundamentals:
+          - Cryptography: 01-foundations/fundamentals/cryptography/index.md
+          - Networking: 01-foundations/fundamentals/networking/index.md
+          - Operating Systems: 01-foundations/fundamentals/operating-systems/index.md
+          - Scripting: 01-foundations/fundamentals/scripting/index.md
+      - Certifications: 01-foundations/certifications/index.md
+      - Courseware: 01-foundations/courseware/index.md
+      - Glossary: 01-foundations/glossary/index.md
+  - Hands-On Work (02):
+      - Home Labs: 02-hands-on-work/home-labs/index.md
+      - Vulnerable Applications: 02-hands-on-work/vulnerable-apps/index.md
+  - Toolkit (03):
+      - Reconnaissance: 03-toolkit/reconnaissance/index.md
+      - Scanning & Enumeration: 03-toolkit/scanning-enumeration/index.md
+      - Exploitation: 03-toolkit/exploitation/index.md
+      - Post-Exploitation: 03-toolkit/post-exploitation/index.md
+      - Password Cracking: 03-toolkit/password-cracking/index.md
+      - Network Defense: 03-toolkit/network-defense/index.md
+      - Cloud Security Tools: 03-toolkit/cloud-security-tools/index.md
+      - Container & Kubernetes Security: 03-toolkit/container-kubernetes-security/index.md
+      - Forensics Tools: 03-toolkit/forensics-tools/index.md
+      - Malware Analysis Tools: 03-toolkit/malware-analysis-tools/index.md
+      - OSINT Tools: 03-toolkit/osint-tools/index.md
+      - Tool Spotlight: 03-toolkit/tool-spotlight/index.md
+  - Cheatsheets (04):
+      - Command Cheatsheets: 04-cheatsheets/command-cheatsheets/index.md
+      - Frameworks: 04-cheatsheets/frameworks/index.md
+      - Payload Cheatsheets: 04-cheatsheets/payload-cheatsheets/index.md
+  - Research (05):
+      - Blogs: 05-research/blogs/index.md
+      - Books: 05-research/books/index.md
+  - Governance, Risk & Compliance (06):
+      - Framework Primers: 06-grc/framework-primers/index.md
+      - Templates: 06-grc/templates/index.md
+  - DFIR & Malware Analysis (07):
+      - Incident Response Playbooks: 07-dfir-malware-analysis/ir-playbooks/index.md
+      - Memory Forensics: 07-dfir-malware-analysis/memory-forensics/index.md
+      - Sandboxing Guides: 07-dfir-malware-analysis/sandboxing-guides/index.md
+      - YARA Rules: 07-dfir-malware-analysis/yara-rules/index.md
+  - Scripts (08): 08-scripts/index.md
+
+# ---- Markdown extensions ------------------------------------------
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - admonition
+  - footnotes
+  - meta
+
+# ---- Plugins ------------------------------------------------------
+plugins:
+  - search:
+      lang: en
+
+extra:
+  generator: false
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+
+# ---- Formatting ---------------------------------------------------
+strict: false
