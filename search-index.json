@@ -1,0 +1,248 @@
+[
+  {
+    "title": "Index",
+    "path": "01-foundations\\certifications\\index.md",
+    "section": "Foundations / 01 Foundations / Certifications",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\courseware\\index.md",
+    "section": "Foundations / 01 Foundations / Courseware",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\fundamentals\\cryptography\\index.md",
+    "section": "Foundations / 01 Foundations / Fundamentals / Cryptography",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\fundamentals\\networking\\index.md",
+    "section": "Foundations / 01 Foundations / Fundamentals / Networking",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\fundamentals\\operating-systems\\index.md",
+    "section": "Foundations / 01 Foundations / Fundamentals / Operating Systems",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\fundamentals\\scripting\\index.md",
+    "section": "Foundations / 01 Foundations / Fundamentals / Scripting",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\glossary\\index.md",
+    "section": "Foundations / 01 Foundations / Glossary",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\application-security\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Application Security",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\cloud-security\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Cloud Security",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\defensive-security\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Defensive Security",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\digital-forensics-incident-response\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Digital Forensics Incident Response",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\governance-risk-compliance\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Governance Risk Compliance",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "01-foundations\\roadmaps\\offensive-security\\index.md",
+    "section": "Foundations / 01 Foundations / Roadmaps / Offensive Security",
+    "file": "index.md"
+  },
+  {
+    "title": "Offensive Security Roadmap",
+    "path": "01-foundations\\roadmaps\\offensive-security-roadmap.md",
+    "section": "Foundations / 01 Foundations / Roadmaps",
+    "file": "offensive-security-roadmap.md"
+  },
+  {
+    "title": "Index",
+    "path": "02-hands-on-work\\home-labs\\index.md",
+    "section": "Hands-On Work / 02 Hands On Work / Home Labs",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "02-hands-on-work\\vulnerable-apps\\index.md",
+    "section": "Hands-On Work / 02 Hands On Work / Vulnerable Apps",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\cloud-security-tools\\index.md",
+    "section": "Toolkit / 03 Toolkit / Cloud Security Tools",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\container-kubernetes-security\\index.md",
+    "section": "Toolkit / 03 Toolkit / Container Kubernetes Security",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\exploitation\\index.md",
+    "section": "Toolkit / 03 Toolkit / Exploitation",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\forensics-tools\\index.md",
+    "section": "Toolkit / 03 Toolkit / Forensics Tools",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\malware-analysis-tools\\index.md",
+    "section": "Toolkit / 03 Toolkit / Malware Analysis Tools",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\network-defense\\index.md",
+    "section": "Toolkit / 03 Toolkit / Network Defense",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\osint-tools\\index.md",
+    "section": "Toolkit / 03 Toolkit / Osint Tools",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\password-cracking\\index.md",
+    "section": "Toolkit / 03 Toolkit / Password Cracking",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\post-exploitation\\index.md",
+    "section": "Toolkit / 03 Toolkit / Post Exploitation",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\reconnaissance\\index.md",
+    "section": "Toolkit / 03 Toolkit / Reconnaissance",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\scanning-enumeration\\index.md",
+    "section": "Toolkit / 03 Toolkit / Scanning Enumeration",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "03-toolkit\\tool-spotlight\\index.md",
+    "section": "Toolkit / 03 Toolkit / Tool Spotlight",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "04-cheatsheets\\command-cheatsheets\\index.md",
+    "section": "Cheatsheets / 04 Cheatsheets / Command Cheatsheets",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "04-cheatsheets\\frameworks\\index.md",
+    "section": "Cheatsheets / 04 Cheatsheets / Frameworks",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "04-cheatsheets\\payload-cheatsheets\\index.md",
+    "section": "Cheatsheets / 04 Cheatsheets / Payload Cheatsheets",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "05-research\\blogs\\index.md",
+    "section": "Research / 05 Research / Blogs",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "05-research\\books\\index.md",
+    "section": "Research / 05 Research / Books",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "06-grc\\framework-primers\\index.md",
+    "section": "GRC / 06 Grc / Framework Primers",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "06-grc\\templates\\index.md",
+    "section": "GRC / 06 Grc / Templates",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "07-dfir-malware-analysis\\ir-playbooks\\index.md",
+    "section": "DFIR & Malware Analysis / 07 Dfir Malware Analysis / Ir Playbooks",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "07-dfir-malware-analysis\\memory-forensics\\index.md",
+    "section": "DFIR & Malware Analysis / 07 Dfir Malware Analysis / Memory Forensics",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "07-dfir-malware-analysis\\sandboxing-guides\\index.md",
+    "section": "DFIR & Malware Analysis / 07 Dfir Malware Analysis / Sandboxing Guides",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "07-dfir-malware-analysis\\yara-rules\\index.md",
+    "section": "DFIR & Malware Analysis / 07 Dfir Malware Analysis / Yara Rules",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "08-scripts\\index.md",
+    "section": "Scripts / 08 Scripts",
+    "file": "index.md"
+  },
+  {
+    "title": "Index",
+    "path": "index.md",
+    "section": "Other",
+    "file": "index.md"
+  }
+]

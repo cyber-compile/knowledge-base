@@ -28,13 +28,26 @@ jobs:
       - name: Install dependencies
         run: python3 -m pip install --quiet --upgrade pip && python3 -m pip install --quiet -r requirements.txt
 
-      - name: Build site
-        run: python3 -m mkdocs build --clean
+      - name: Build static site
+        run: |
+          echo "Building static site..."
+          # Static site files (index.html, style.css, script.js) are already committed
+          # Just verify they exist
+          ls -la index.html style.css script.js favicon.svg
+
+      - name: Build MkDocs documentation (optional)
+        run: |
+          if [ -f "mkdocs.yml" ]; then
+            echo "Building MkDocs documentation..."
+            python3 -m mkdocs build --clean
+          else
+            echo "No mkdocs.yml found, skipping"
+          fi
 
       - name: Upload artifact for Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: .
 
       - name: Deploy to Cloudflare Pages
         id: deploy
@@ -42,5 +55,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           projectName: knowledge-base
-          directory: site
+          directory: .
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

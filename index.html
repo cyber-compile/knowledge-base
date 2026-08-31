@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberCompile - A massive open-access cybersecurity knowledge library">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>CyberCompile - Cybersecurity Knowledge Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">CyberCompile</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="#sections" class="nav-link">Sections</a>
+                <a href="#search-container" class="nav-link">Search</a>
+                <a href="https://github.com/cyber-compile/knowledge-base" target="_blank" class="nav-link">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">CyberCompile</h1>
+                <p class="hero-subtitle">A massive open-access cybersecurity knowledge library</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Sections</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">42</span>
+                        <span class="stat-label">Pages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Open Access</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <svg viewBox="0 0 200 200" class="hero-svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#f59e0b"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.5"/>
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.7"/>
+                    <polygon points="100,20 180,100 100,180 20,100" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.4"/>
+                    <circle cx="100" cy="100" r="8" fill="url(#grad1)"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section id="search-container" class="search-section">
+        <div class="search-container-inner">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search documentation, topics, tools..." autocomplete="off">
+                <button id="search-clear" class="search-clear" aria-label="Clear search">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section Navigation Tree -->
+        <section id="sections" class="sections-section">
+            <div class="container">
+                <h2 class="section-title">Knowledge Base Sections</h2>
+                <div class="nav-tree-container">
+                    <div class="nav-sidebar">
+                        <div class="nav-section">
+                            <h3 class="nav-section-title">Browse by Section</h3>
+                            <ul class="nav-tree" id="nav-tree">
+                                <!-- Populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-header">
+                            <h2 id="page-title" class="content-title">Select a page to view</h2>
+                            <div class="content-meta">
+                                <span id="page-section" class="meta-item"></span>
+                                <a id="edit-link" class="edit-link" href="#" target="_blank">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.43738 22.1213 4.00001C22.1213 4.56264 21.8978 5.10219 21.5 5.50001L12 15L9 17.5L10.25 18.75C10.0833 18.9767 9.85589 19.1459 9.59249 19.2408C9.32908 19.3356 9.04252 19.3547 8.77063 19.3006C8.50995 19.2447 8.26282 19.1218 8.06201 18.9379C7.8612 18.7541 7.71657 18.5158 7.64956 18.2524L5 15L4 13L19 13L18.5 2.50001Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Edit on GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div id="content-display" class="content-display markdown-body">
+                            <!-- Content loaded here -->
+                            <div class="placeholder-content">
+                                <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p>Select a topic from the navigation tree to view its content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>CyberCompile</span>
+                    </a>
+                    <p class="footer-tagline">Open-access cybersecurity knowledge for everyone</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Sections</h4>
+                        <ul class="footer-nav" id="footer-nav">
+                            <!-- Populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Project</h4>
+                        <ul class="footer-nav">
+                            <li><a href="https://github.com/cyber-compile/knowledge-base" target="_blank">GitHub Repository</a></li>
+                            <li><a href="CONTRIBUTING.md">Contributing</a></li>
+                            <li><a href="CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberCompile. Open knowledge, freely available.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

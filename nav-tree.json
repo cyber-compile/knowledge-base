@@ -1,0 +1,540 @@
+{
+  "Foundations": {
+    "type": "section",
+    "children": {
+      "01 Foundations": {
+        "type": "directory",
+        "path": "01-foundations",
+        "children": {
+          "Certifications": {
+            "type": "directory",
+            "path": "01-foundations\\certifications",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "01-foundations\\certifications\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Courseware": {
+            "type": "directory",
+            "path": "01-foundations\\courseware",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "01-foundations\\courseware\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Fundamentals": {
+            "type": "directory",
+            "path": "01-foundations\\fundamentals",
+            "children": {
+              "Cryptography": {
+                "type": "directory",
+                "path": "01-foundations\\fundamentals\\cryptography",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\fundamentals\\cryptography\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Networking": {
+                "type": "directory",
+                "path": "01-foundations\\fundamentals\\networking",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\fundamentals\\networking\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Operating Systems": {
+                "type": "directory",
+                "path": "01-foundations\\fundamentals\\operating-systems",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\fundamentals\\operating-systems\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Scripting": {
+                "type": "directory",
+                "path": "01-foundations\\fundamentals\\scripting",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\fundamentals\\scripting\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              }
+            }
+          },
+          "Glossary": {
+            "type": "directory",
+            "path": "01-foundations\\glossary",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "01-foundations\\glossary\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Roadmaps": {
+            "type": "directory",
+            "path": "01-foundations\\roadmaps",
+            "children": {
+              "Application Security": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\application-security",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\application-security\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Cloud Security": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\cloud-security",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\cloud-security\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Defensive Security": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\defensive-security",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\defensive-security\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Digital Forensics Incident Response": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\digital-forensics-incident-response",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\digital-forensics-incident-response\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Governance Risk Compliance": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\governance-risk-compliance",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\governance-risk-compliance\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Offensive Security": {
+                "type": "directory",
+                "path": "01-foundations\\roadmaps\\offensive-security",
+                "children": {
+                  "Index": {
+                    "type": "file",
+                    "path": "01-foundations\\roadmaps\\offensive-security\\index.md",
+                    "file": "index.md"
+                  }
+                }
+              },
+              "Offensive Security Roadmap": {
+                "type": "file",
+                "path": "01-foundations\\roadmaps\\offensive-security-roadmap.md",
+                "file": "offensive-security-roadmap.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Hands-On Work": {
+    "type": "section",
+    "children": {
+      "02 Hands On Work": {
+        "type": "directory",
+        "path": "02-hands-on-work",
+        "children": {
+          "Home Labs": {
+            "type": "directory",
+            "path": "02-hands-on-work\\home-labs",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "02-hands-on-work\\home-labs\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Vulnerable Apps": {
+            "type": "directory",
+            "path": "02-hands-on-work\\vulnerable-apps",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "02-hands-on-work\\vulnerable-apps\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Toolkit": {
+    "type": "section",
+    "children": {
+      "03 Toolkit": {
+        "type": "directory",
+        "path": "03-toolkit",
+        "children": {
+          "Cloud Security Tools": {
+            "type": "directory",
+            "path": "03-toolkit\\cloud-security-tools",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\cloud-security-tools\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Container Kubernetes Security": {
+            "type": "directory",
+            "path": "03-toolkit\\container-kubernetes-security",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\container-kubernetes-security\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Exploitation": {
+            "type": "directory",
+            "path": "03-toolkit\\exploitation",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\exploitation\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Forensics Tools": {
+            "type": "directory",
+            "path": "03-toolkit\\forensics-tools",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\forensics-tools\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Malware Analysis Tools": {
+            "type": "directory",
+            "path": "03-toolkit\\malware-analysis-tools",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\malware-analysis-tools\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Network Defense": {
+            "type": "directory",
+            "path": "03-toolkit\\network-defense",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\network-defense\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Osint Tools": {
+            "type": "directory",
+            "path": "03-toolkit\\osint-tools",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\osint-tools\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Password Cracking": {
+            "type": "directory",
+            "path": "03-toolkit\\password-cracking",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\password-cracking\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Post Exploitation": {
+            "type": "directory",
+            "path": "03-toolkit\\post-exploitation",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\post-exploitation\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Reconnaissance": {
+            "type": "directory",
+            "path": "03-toolkit\\reconnaissance",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\reconnaissance\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Scanning Enumeration": {
+            "type": "directory",
+            "path": "03-toolkit\\scanning-enumeration",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\scanning-enumeration\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Tool Spotlight": {
+            "type": "directory",
+            "path": "03-toolkit\\tool-spotlight",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "03-toolkit\\tool-spotlight\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Cheatsheets": {
+    "type": "section",
+    "children": {
+      "04 Cheatsheets": {
+        "type": "directory",
+        "path": "04-cheatsheets",
+        "children": {
+          "Command Cheatsheets": {
+            "type": "directory",
+            "path": "04-cheatsheets\\command-cheatsheets",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "04-cheatsheets\\command-cheatsheets\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Frameworks": {
+            "type": "directory",
+            "path": "04-cheatsheets\\frameworks",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "04-cheatsheets\\frameworks\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Payload Cheatsheets": {
+            "type": "directory",
+            "path": "04-cheatsheets\\payload-cheatsheets",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "04-cheatsheets\\payload-cheatsheets\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Research": {
+    "type": "section",
+    "children": {
+      "05 Research": {
+        "type": "directory",
+        "path": "05-research",
+        "children": {
+          "Blogs": {
+            "type": "directory",
+            "path": "05-research\\blogs",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "05-research\\blogs\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Books": {
+            "type": "directory",
+            "path": "05-research\\books",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "05-research\\books\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "GRC": {
+    "type": "section",
+    "children": {
+      "06 Grc": {
+        "type": "directory",
+        "path": "06-grc",
+        "children": {
+          "Framework Primers": {
+            "type": "directory",
+            "path": "06-grc\\framework-primers",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "06-grc\\framework-primers\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Templates": {
+            "type": "directory",
+            "path": "06-grc\\templates",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "06-grc\\templates\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "DFIR & Malware Analysis": {
+    "type": "section",
+    "children": {
+      "07 Dfir Malware Analysis": {
+        "type": "directory",
+        "path": "07-dfir-malware-analysis",
+        "children": {
+          "Ir Playbooks": {
+            "type": "directory",
+            "path": "07-dfir-malware-analysis\\ir-playbooks",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "07-dfir-malware-analysis\\ir-playbooks\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Memory Forensics": {
+            "type": "directory",
+            "path": "07-dfir-malware-analysis\\memory-forensics",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "07-dfir-malware-analysis\\memory-forensics\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Sandboxing Guides": {
+            "type": "directory",
+            "path": "07-dfir-malware-analysis\\sandboxing-guides",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "07-dfir-malware-analysis\\sandboxing-guides\\index.md",
+                "file": "index.md"
+              }
+            }
+          },
+          "Yara Rules": {
+            "type": "directory",
+            "path": "07-dfir-malware-analysis\\yara-rules",
+            "children": {
+              "Index": {
+                "type": "file",
+                "path": "07-dfir-malware-analysis\\yara-rules\\index.md",
+                "file": "index.md"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "Scripts": {
+    "type": "section",
+    "children": {
+      "08 Scripts": {
+        "type": "directory",
+        "path": "08-scripts",
+        "children": {
+          "Index": {
+            "type": "file",
+            "path": "08-scripts\\index.md",
+            "file": "index.md"
+          }
+        }
+      }
+    }
+  },
+  "Other": {
+    "type": "section",
+    "children": {
+      "Index": {
+        "type": "file",
+        "path": "index.md",
+        "file": "index.md"
+      }
+    }
+  }
+}
