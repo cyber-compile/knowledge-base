@@ -20,12 +20,10 @@
 | **DFIR & Malware Analysis** | IR playbooks, memory forensics, sandboxing guides and YARA rules |
 | **Scripts** | Reusable scripts that back the library and its workflows |
 
-## Getting started
+## Quick start
 
 This site is built with [MkDocs](https://www.mkdocs.org/) and the
 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
-
-<div class="grid">
 
 ```bash
 # Clone the repo
@@ -37,16 +35,14 @@ pip install -r requirements.txt
 mkdocs serve
 ```
 
-</div>
-
 Once the server is up, open <http://127.0.0.1:8000> — the same site you see on
 <https://cybercompile.com>.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or update content.
-The project follows the [Code of Conduct](CODE_OF_CONDUCT.md).
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for how to add or update content.
+The project follows the [Code of Conduct](../CODE_OF_CONDUCT.md).
 
 ## License
 
-Public, open access. See the [LICENSE](LICENSE) file for details.
+Public, open access. See the [LICENSE](../LICENSE) file for details.

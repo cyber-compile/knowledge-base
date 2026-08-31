@@ -8,8 +8,6 @@ site_url: https://cybercompile.com
 # Source lives in content/; build output goes to site/
 docs_dir: content
 site_dir: site
-
-# ---- Build ---------------------------------------------------------
 theme:
   name: material
   palette:
