@@ -29,8 +29,9 @@
             </button>
             
             <div class="nav-links">
-                <a href="#sections" class="nav-link">Sections</a>
+                <a href="#browse" class="nav-link">Browse</a>
                 <a href="#search-container" class="nav-link">Search</a>
+                <a href="#sections" class="nav-link">All Pages</a>
                 <a href="https://github.com/cyber-compile/knowledge-base" target="_blank" class="nav-link">GitHub</a>
             </div>
         </div>
@@ -39,58 +40,150 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">CyberCompile</h1>
-                <p class="hero-subtitle">A massive open-access cybersecurity knowledge library</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">8</span>
-                        <span class="stat-label">Sections</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">42</span>
-                        <span class="stat-label">Pages</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Open Access</span>
-                    </div>
+            <p class="hero-eyebrow">Massive Open-Access Cybersecurity Knowledge Base</p>
+            <h1 class="hero-title">CyberCompile</h1>
+            <p class="hero-subtitle">Roadmaps, toolkits, cheat sheets, and playbooks for offensive security, defense, GRC, and DFIR — organized so you can actually find what you need.</p>
+
+            <div id="search-container" class="hero-search">
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search documentation, topics, tools..." autocomplete="off">
+                    <button id="search-clear" class="search-clear" aria-label="Clear search">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="hero-decoration">
-                <svg viewBox="0 0 200 200" class="hero-svg">
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#6366f1"/>
-                            <stop offset="100%" style="stop-color:#f59e0b"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.3"/>
-                    <circle cx="100" cy="100" r="60" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.5"/>
-                    <circle cx="100" cy="100" r="40" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.7"/>
-                    <polygon points="100,20 180,100 100,180 20,100" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.4"/>
-                    <circle cx="100" cy="100" r="8" fill="url(#grad1)"/>
-                </svg>
+                <div id="search-results" class="search-results"></div>
+                <p class="hero-popular">
+                    <span>Popular:</span>
+                    <a href="#" class="file-link" data-file="content/01-foundations/roadmaps/offensive-security-roadmap.md">Offensive Security Roadmap</a>
+                    <a href="#" class="file-link" data-file="content/03-toolkit/reconnaissance/index.md">Reconnaissance</a>
+                    <a href="#" class="file-link" data-file="content/03-toolkit/password-cracking/index.md">Password Cracking</a>
+                    <a href="#" class="file-link" data-file="content/06-grc/templates/index.md">GRC Templates</a>
+                </p>
             </div>
         </div>
     </header>
 
-    <!-- Search Section -->
-    <section id="search-container" class="search-section">
-        <div class="search-container-inner">
-            <div class="search-box">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <input type="text" id="search-input" placeholder="Search documentation, topics, tools..." autocomplete="off">
-                <button id="search-clear" class="search-clear" aria-label="Clear search">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Browse / Landing Section -->
+    <section id="browse" class="browse-section">
+        <div class="container">
+            <div class="browse-header">
+                <h2 class="section-title">Browse by category</h2>
+                <span class="category-count">8 categories</span>
+            </div>
+
+            <div class="category-grid">
+                <button type="button" class="category-tile" data-path="content/01-foundations">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 10L12 5L2 10L12 15L22 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 12V17C6 17 8 19 12 19C16 19 18 17 18 17V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
+                    <span class="category-label">Learning</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/02-hands-on-work">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 3V9L4.5 18C4 19 4.7 20 6 20H18C19.3 20 20 19 19.5 18L14 9V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 15H17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="category-label">Hands-on labs</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/03-toolkit">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="8" width="20" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M8 8V6C8 4.9 8.9 4 10 4H14C15.1 4 16 4.9 16 6V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 13H22" stroke="currentColor" stroke-width="2"/>
+                        <path d="M11 11V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="category-label">Tools</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/04-cheatsheets">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 13H16M8 17H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="category-label">Cheat sheets</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/05-research">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 5C2 5 5 3 8 3C11 3 12 5 12 5V19C12 19 11 17 8 17C5 17 2 19 2 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 5C22 5 19 3 16 3C13 3 12 5 12 5V19C12 19 13 17 16 17C19 17 22 19 22 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="category-label">Research</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/06-grc">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3H15C15.6 3 16 3.4 16 4V6H8V4C8 3.4 8.4 3 9 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 5H4C3.4 5 3 5.4 3 6V20C3 20.6 3.4 21 4 21H20C20.6 21 21 20.6 21 20V6C21 5.4 20.6 5 20 5H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 13L11 15L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="category-label">GRC</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/07-dfir-malware-analysis">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14.5 14.5L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 7V10L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="category-label">DFIR</span>
+                </button>
+                <button type="button" class="category-tile" data-path="content/08-scripts">
+                    <svg class="category-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 6L22 12L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 4L11 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="category-label">Scripts</span>
                 </button>
             </div>
-            <div id="search-results" class="search-results"></div>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3 class="info-card-title">Start here</h3>
+                    <ul class="info-card-list">
+                        <li><a href="#" class="file-link" data-file="content/01-foundations/roadmaps/offensive-security-roadmap.md">Offensive Security Roadmap</a></li>
+                        <li><a href="#" class="file-link" data-file="content/03-toolkit/reconnaissance/index.md">Reconnaissance</a></li>
+                        <li><a href="#" class="file-link" data-file="content/06-grc/templates/index.md">GRC Templates</a></li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card-title">New here?</h3>
+                    <p class="info-card-text">This library just launched — most sections are scaffolded and being filled in over time. The first full deep-dive is live now.</p>
+                    <a href="#" class="file-link info-card-link" data-file="content/01-foundations/roadmaps/offensive-security-roadmap.md">Read the Offensive Security Roadmap &rarr;</a>
+                </div>
+            </div>
+
+            <div class="landing-stats">
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Pages</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Open Access</span>
+                </div>
+            </div>
+
+            <a class="contribute-cta" href="https://github.com/cyber-compile/knowledge-base/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">
+                <span class="contribute-text">
+                    <strong>Contribute a resource</strong>
+                    <span>Open a PR — reviewed and merged when ready</span>
+                </span>
+                <svg class="contribute-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
     </section>
 
@@ -99,7 +192,7 @@
         <!-- Section Navigation Tree -->
         <section id="sections" class="sections-section">
             <div class="container">
-                <h2 class="section-title">Knowledge Base Sections</h2>
+                <h2 class="section-title">All Pages</h2>
                 <div class="nav-tree-container">
                     <div class="nav-sidebar">
                         <div class="nav-section">

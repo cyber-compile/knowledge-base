@@ -481,8 +481,28 @@ function buildFooterNavHTML(tree) {
     return html;
 }
 
+// Expand a top-level category in the tree and scroll it into view.
+// Used by the "Browse by category" tiles on the landing section.
+function focusCategory(path) {
+    const link = document.querySelector(`.tree-link[data-path="${path}"]`);
+    const li = link?.closest('li');
+    if (!li) return;
+
+    li.classList.add('expanded');
+    const childUl = li.querySelector('ul');
+    if (childUl) childUl.style.display = 'block';
+
+    document.getElementById('sections')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 // Initialize tree interactions
 document.addEventListener('click', (e) => {
+    const categoryTile = e.target.closest('.category-tile');
+    if (categoryTile) {
+        focusCategory(categoryTile.dataset.path);
+        return;
+    }
+
     const treeLink = e.target.closest('.tree-link');
     const fileLink = e.target.closest('.file-link');
     
@@ -593,11 +613,14 @@ async function loadMarkdownFile(filePath) {
         }
         
         contentDisplay.innerHTML = html;
-        
+
         // Update URL hash
         if (history.pushState) {
             history.pushState(null, '', `#${encodeURIComponent(filePath)}`);
         }
+
+        // Content lives below the landing section - bring it into view
+        document.getElementById('sections')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
     } catch (error) {
         contentDisplay.innerHTML = `
