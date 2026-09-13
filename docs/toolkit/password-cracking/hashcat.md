@@ -177,7 +177,7 @@ start cracking, not after you've already got the password.
 
 ## See also
 
-- [Password Cracking overview](index.md)
-- [Certifications guide](../../01-foundations/certifications/index.md)
+- Password Cracking overview (page coming soon)
+- Certifications guide (page coming soon)
 - John the Ripper — CPU-based alternative with a different rule engine (page coming soon)
 - Hydra — for live/online authentication attacks, not offline hashes (page coming soon)

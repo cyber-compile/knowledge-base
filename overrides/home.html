@@ -1,0 +1,154 @@
+{% extends "main.html" %}
+{% import "partials/kb-icon.html" as kbicon %}
+
+{#
+  Custom landing page that recreates the previous Next.js homepage:
+  animated hero, live status strip, category grid, and changelog feed.
+  All data comes from hooks/kb.py via config.extra.kb.
+#}
+
+{% block content %}
+{% set kb = config.extra.kb %}
+<div class="kb-home">
+
+  <!-- Hero -->
+  <section class="kb-hero">
+    <div class="kb-hero-bg" aria-hidden="true">
+      <div class="kb-hero-grid"></div>
+      <div class="kb-hero-glow kb-hero-glow--a"></div>
+      <div class="kb-hero-glow kb-hero-glow--b"></div>
+      <div class="kb-hero-nodes" data-kb-nodes></div>
+    </div>
+
+    <div class="kb-hero-inner">
+      <h1 class="kb-hero-title">Read it, Analyse it, Run it and Gain it!</h1>
+      <p class="kb-hero-sub">
+        A living knowledge base built for security engineers and professionals
+        hunting for reference.
+      </p>
+
+      <button type="button" class="kb-hero-search" data-kb-search>
+        {{ kbicon.icon("search", 18) }}
+        <span>Search tools, cheatsheets, write-ups&hellip;</span>
+        <kbd class="kb-kbd">Ctrl K</kbd>
+      </button>
+
+      {% if kb.shortcuts %}
+      <div class="kb-hero-pills">
+        {% for link in kb.shortcuts %}
+        <a class="kb-pill" href="{{ link.href | url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Status strip -->
+  {% if kb.stats %}
+  <section class="kb-status" aria-label="Site activity">
+    <div class="kb-status-inner">
+      <span class="kb-live">
+        <span class="kb-live-dot"><span class="status-ping"></span></span>
+        <span class="kb-live-label">Live</span>
+      </span>
+      <div class="kb-stats">
+        {% for stat in kb.stats %}
+        <a class="kb-stat" href="{{ stat.href | url }}">
+          <span class="kb-stat-value">{{ stat.value }}</span>
+          <span class="kb-stat-label">{{ stat.label }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Category grid -->
+  {% if kb.grid %}
+  <section class="kb-section">
+    <h2 class="kb-section-title">Browse by category</h2>
+    <div class="kb-grid">
+      {% for card in kb.grid %}
+      <a class="kb-card" href="{{ card.href | url }}">
+        <span class="kb-card-tint" aria-hidden="true"></span>
+        <div class="kb-card-top">
+          <span class="kb-card-icon">{{ kbicon.icon(card.icon, 20) }}</span>
+          <span class="kb-card-count">{{ card.count }} {{ "page" if card.count == 1 else "pages" }}</span>
+        </div>
+        <h3 class="kb-card-title">{{ card.title }}</h3>
+        {% if card.description %}
+        <p class="kb-card-desc">{{ card.description }}</p>
+        {% endif %}
+        {% if card.pills %}
+        <ul class="kb-card-pills">
+          {% for pill in card.pills %}
+          <li>{{ pill }}</li>
+          {% endfor %}
+          {% if card.overflow > 0 %}
+          <li class="kb-card-more">+{{ card.overflow }} more</li>
+          {% endif %}
+        </ul>
+        {% endif %}
+        <span class="kb-card-cta">
+          Browse
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Changelog -->
+  {% if kb.changelog %}
+  <section class="kb-section kb-section--alt">
+    <div class="kb-changelog-layout">
+      <div class="kb-changelog-intro">
+        <h2 class="kb-section-title">Changelog</h2>
+        <p class="kb-changelog-lead">
+          Everything added or rewritten here, newest first. The feed scrolls on
+          its own &mdash; hover to hold it still.
+        </p>
+        <a class="kb-textlink" href="{{ 'cheatsheets/' | url }}">Browse all documentation &rarr;</a>
+      </div>
+
+      <div class="kb-changelog-card">
+        <div class="kb-changelog-head">
+          <span class="kb-changelog-badge">
+            <span class="kb-live-dot kb-live-dot--accent"><span class="status-ping"></span></span>
+            Activity feed
+          </span>
+        </div>
+        <div class="{{ 'kb-changelog-viewport' if kb.changelog|length >= 5 else 'kb-changelog-static' }}">
+          <ul class="{{ 'kb-changelog-track' if kb.changelog|length >= 5 else '' }}">
+            {% for entry in kb.changelog %}
+            <li>
+              <a class="kb-changelog-row" href="{{ entry.href | url }}">
+                <svg class="kb-commit" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></svg>
+                <span class="kb-changelog-time">{{ entry.relative }}</span>
+                <span class="kb-changelog-title">{{ entry.title }}</span>
+                <span class="kb-changelog-section">{{ entry.section }}</span>
+              </a>
+            </li>
+            {% endfor %}
+            {% if kb.changelog|length >= 5 %}
+            {% for entry in kb.changelog %}
+            <li aria-hidden="true">
+              <a class="kb-changelog-row" href="{{ entry.href | url }}" tabindex="-1">
+                <svg class="kb-commit" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><line x1="3" x2="9" y1="12" y2="12"/><line x1="15" x2="21" y1="12" y2="12"/></svg>
+                <span class="kb-changelog-time">{{ entry.relative }}</span>
+                <span class="kb-changelog-title">{{ entry.title }}</span>
+                <span class="kb-changelog-section">{{ entry.section }}</span>
+              </a>
+            </li>
+            {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+</div>
+{% endblock %}
